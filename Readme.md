@@ -1,5 +1,3 @@
-# Temp
-
 # Terraform Examples
 
 <aside>
