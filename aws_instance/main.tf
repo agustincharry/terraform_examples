@@ -62,11 +62,11 @@ resource "aws_iam_instance_profile" "EC2InstanceProfile" {
 
 
 resource "aws_instance" "app_server" {
-  ami                  = "ami-05fa00d4c63e32376"
-  instance_type        = "t3.micro"
+  ami                  = var.instance_ami
+  instance_type        = var.instance_type
   iam_instance_profile = aws_iam_instance_profile.EC2InstanceProfile.name
 
   tags = {
-    Name = "ExampleAppServerInstance"
+    Name = var.instance_name
   }
 }
